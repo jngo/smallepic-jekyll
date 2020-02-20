@@ -1,0 +1,53 @@
+---
+---
+@import 'bourbon/bourbon';
+
+
+// Modular Scale
+// -------------------------
+
+$bourbon: (
+  "modular-scale-base": 1rem,
+  "modular-scale-ratio": $perfect-fourth,
+);
+
+
+// Colors
+// -------------------------
+
+$color-black: #333333;
+$color-grey: #CCCCCC;
+$color-white: #FFFFFF;
+
+
+// Fonts
+// -------------------------
+
+$font-color: $color-black;
+$font-family-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family: Georgia, 'Times New Roman', Times, serif;
+$font-size: modular-scale(0);
+$font-weight: normal;
+
+
+// Base
+// -------------------------
+
+*
+{
+  box-sizing: border-box;
+}
+
+body
+{
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $font-size;
+  font-weight: $font-weight;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6
+{
+  font-family: $font-family-heading;
+}

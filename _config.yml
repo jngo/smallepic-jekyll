@@ -1,0 +1,3 @@
+destination: public
+title: John Ngo
+exclude: ['README.md']
