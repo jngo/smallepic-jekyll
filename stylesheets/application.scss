@@ -23,11 +23,12 @@ $color-white: #FFFFFF;
 // Fonts
 // -------------------------
 
-$font-color: $color-black;
-$font-family-heading: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family: Georgia, 'Times New Roman', Times, serif;
+$font-color: $color-white;
+$font-family-heading: 'ff-meta-serif-web-pro', 'Times New Roman', Times, serif;
+$font-family: 'inconsolata', Courier, monospace;
 $font-size: modular-scale(0);
-$font-weight: normal;
+$font-weight: 500;
+$font-weight-heading: 700;
 
 
 // Base
