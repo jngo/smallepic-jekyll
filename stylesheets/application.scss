@@ -8,27 +8,35 @@
 
 $bourbon: (
   "modular-scale-base": 1rem,
-  "modular-scale-ratio": $perfect-fourth,
+  "modular-scale-ratio": $minor-second,
 );
 
 
 // Colors
 // -------------------------
 
-$color-black: #002b36;
-$color-grey: #839496;
-$color-white: #839496;
+$color-base-03: #002b36;
+$color-base-02: #073642;
+$color-base-01: #586e75;
+$color-base-0: #839496;
+$color-base-1: #93a1a1;
+$color-cyan: #2aa198;
 
 
-// Fonts
+// Typography
 // -------------------------
 
-$font-color: $color-white;
-$font-family-heading: 'ff-meta-serif-web-pro', 'Times New Roman', Times, serif;
-$font-family: 'inconsolata', Courier, monospace;
-$font-size: modular-scale(0);
-$font-weight: 500;
-$font-weight-heading: 700;
+$typography-font-color: $color-base-0;
+$typography-font-family-heading: 'ff-meta-serif-web-pro', 'Times New Roman', Times, serif;
+$typography-font-family: 'inconsolata', Courier, monospace;
+$typography-font-size-small: modular-scale(-1);
+$typography-font-size-medium: modular-scale(0);
+$typography-font-size-large: modular-scale(1);
+$typography-font-weight: 500;
+$typography-font-weight-heading: 700;
+$typography-line-height-small: modular-scale(5);
+$typography-line-height-medium: modular-scale(5);
+$typography-line-height-large: modular-scale(6);
 
 
 // Base
@@ -39,61 +47,81 @@ $font-weight-heading: 700;
   box-sizing: border-box;
 }
 
+html
+{
+  border: solid 1vmax $color-base-01;
+  font-family: $typography-font-family;
+  font-weight: $typography-font-weight;
+  background-color: $color-base-03;
+  color: $typography-font-color;
+  padding: 8vw;
+
+  @media screen
+  {
+    font-size: $typography-font-size-large;
+    line-height: $typography-line-height-large;
+  }
+
+  @media screen and (max-width: 800px)
+  {
+    font-size: $typography-font-size-medium;
+    line-height: $typography-line-height-medium;
+  }
+
+  @media all and (max-width: 400px)
+  {
+    font-size: $typography-font-size-small;
+    line-height: $typography-line-height-small;
+  }
+}
+
 body
 {
-  background-color: $color-black;
-  border: solid modular-scale(-2) #586e75;
-  color: $font-color;
-  font-family: $font-family;
-  font-size: $font-size;
-  font-weight: $font-weight;
-  line-height: modular-scale(1);
   margin: 0;
-  padding: modular-scale(6);
 }
 
 h1, h2, h3, h4, h5, h6
 {
-  font-family: $font-family-heading;
-  font-weight: $font-weight-heading;
+  font-family: $typography-font-family-heading;
+  font-weight: $typography-font-weight-heading;
 }
 
 h1
 {
-  color: #93a1a1;
-  font-size: modular-scale(2);
-  line-height: modular-scale(3);
+  color: $color-base-1;
+  font-size: modular-scale(7);
+  line-height: modular-scale(12);
+  margin: 0 0 modular-scale(6) 0;
 
-  b
+  strong
   {
     display: block;
-    margin-top: modular-scale(1);
+    margin-top: modular-scale(5);
   }
 
-  i
+  em
   {
-    display: block;
+    color: $typography-font-color;
     font-size: modular-scale(0);
     font-style: normal;
     font-weight: 500;
-    margin-top: 0;
   }
 }
 
 h2
 {
   font-size: modular-scale(0);
-  line-height: modular-scale(1);
+  line-height: modular-scale(5);
 }
 
 a
 {
-  color: #2aa198;
+  color: $color-cyan;
   text-decoration: none;
 
   &:hover
   {
-    background: #073642;
+    background: $color-base-02;
   }
 }
 
@@ -105,7 +133,7 @@ ul
 
   li + li
   {
-    margin-top: modular-scale(1);
+    margin-top: modular-scale(0);
   }
 }
 
@@ -113,22 +141,22 @@ header,
 section,
 footer
 {
-  max-width: 48rem;
+  max-width: 40rem;
 }
 
 header + section,
 section + section,
 section + footer
 {
-  margin-top: modular-scale(7);
+  margin-top: modular-scale(31);
 }
 
 header
 {
   p
   {
-    font-size: modular-scale(1);
-    line-height: modular-scale(2);
+    font-size: modular-scale(3);
+    line-height: modular-scale(8);
   }
 }
 
@@ -136,6 +164,8 @@ footer
 {
   ul
   {
+    word-spacing: modular-scale(0);
+
     li
     {
       display: inline-block;
@@ -143,7 +173,6 @@ footer
       & + li
       {
         margin: 0;
-        margin-left: modular-scale(1);
       }
     }
   }
