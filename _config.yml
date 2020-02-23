@@ -5,3 +5,4 @@ meta:
   description: I build products at the intersection of design and engineering.
   url: http://smallepic.com/
 exclude: ['README.md']
+include: ['.well-known']
