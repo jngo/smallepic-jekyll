@@ -2,7 +2,7 @@ destination: public
 title: John Ngo
 meta:
   title: Hi, I’m John Ngo
-  description: Delivering exceptional customer experiences through empowering people, establishing processes, and shaping products.
+  description: I help teams deliver exceptional customer experiences through empowering people, establishing processes, and shaping products.
   url: http://smallepic.com/
 exclude: ['README.md']
 include: ['.well-known']
